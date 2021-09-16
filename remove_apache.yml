@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: remove apache
+    apt:
+      name: vim
+      state: absent
