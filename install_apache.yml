@@ -5,12 +5,30 @@
 
   - name: update repository index
     apt:
-      update_cache: yes	
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"	
   - name: install apache2 package
     apt:
       name: apache2
       state: latest
+    when: ansible_distribution == "Ubuntu"
   - name: install vim
     apt:
       name: vim
       state: latest
+    when: ansible_distribution == "Ubuntu"
+
+  - name: update repository index
+    yum:
+      update_cache: yes
+    when: ansible_distribution == "RedHat"
+  - name: install httpd package
+    yum:
+      name: httpd
+      state: latest
+    when: ansible_distribution == "RedHat"
+  - name: install vim
+    yum:
+      name: vim
+      state: latest
+    when: ansible_distribution == "RedHat"
