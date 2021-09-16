@@ -1,0 +1,13 @@
+--- 
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install apache and vim
+    package:
+      name: 
+        - "{{apache_package}}"
+        - "{{vim_package}}"
+      state: latest
+      update_cache: yes
+  
