@@ -1,0 +1,4 @@
+tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.12/bin/apache-tomcat-10.0.12.tar.gz
+tomcat_package: apache-tomcat-10.0.12
+~
+
